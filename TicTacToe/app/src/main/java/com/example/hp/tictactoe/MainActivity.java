@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,6 +34,12 @@ public class MainActivity extends AppCompatActivity {
             activePlayer=0;
         }
         counter.animate().translationYBy(1500).rotation(3600).setDuration(500);
+
+        for(int[] winningpos:winningPositions){
+            if(game[winningpos[0]]==game[winningpos[1]] && game[winningpos[1]]==game[winningpos[2]] && game[winningpos[0]]!=2){
+                Toast.makeText(this, "Someone has won!!", Toast.LENGTH_LONG).show();
+            }
+        }
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
