@@ -37,7 +37,14 @@ public class MainActivity extends AppCompatActivity {
 
         for(int[] winningpos:winningPositions){
             if(game[winningpos[0]]==game[winningpos[1]] && game[winningpos[1]]==game[winningpos[2]] && game[winningpos[0]]!=2){
-                Toast.makeText(this, "Someone has won!!", Toast.LENGTH_LONG).show();
+
+                String winner="";
+                if(activePlayer==1){
+                    winner="YELLOW";
+                }else{
+                    winner="RED";
+                }
+                Toast.makeText(this, winner+" has won!!", Toast.LENGTH_SHORT).show();
             }
         }
     }
