@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <android.support.v7.widget.GridLayout
-        android:id="@+id/gridLayout"
+        android:id="@+id/mygridLayout"
         android:layout_width="368dp"
         android:layout_height="369dp"
         android:layout_marginStart="8dp"
@@ -125,7 +125,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/mygridLayout" />
 
     <Button
         android:id="@+id/button"

@@ -2,12 +2,12 @@ package com.example.hp.tictactoe;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.support.v7.widget.GridLayout;
+
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -60,6 +60,32 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
+    public void playAgain(View view){
+
+        Button playAgainButton=(Button)findViewById(R.id.button);
+        TextView winnerTextView=(TextView)findViewById(R.id.textView2);
+
+        winnerTextView.setVisibility(View.INVISIBLE);
+        playAgainButton.setVisibility(View.INVISIBLE);
+
+        GridLayout gridLayout=(GridLayout)findViewById(R.id.mygridLayout);
+
+        for(int i=0;i<gridLayout.getChildCount();i++){
+            ImageView counter=(ImageView)gridLayout.getChildAt(i);
+
+            counter.setImageDrawable(null);
+        }
+
+        for (int i=0;i<game.length;i++){
+            game[i]=2;
+        }
+
+        activePlayer=0;
+        gameActive=true;
+    }
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
