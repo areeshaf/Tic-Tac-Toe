@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
         ImageView counter=(ImageView) view;
 
-        //Log.i("Tag",counter.getTag().toString());
+        Log.i("Tag",counter.getTag().toString());
 
         int tappedCounter=Integer.parseInt(counter.getTag().toString());
 
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
                         flag=1;
                         winner = "RED";
                     }
-                    //Toast.makeText(this, winner + " has won!!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, winner + " has won!!", Toast.LENGTH_SHORT).show();
                     Button playAgainButton=(Button)findViewById(R.id.button);
                     TextView winnerTextView=(TextView)findViewById(R.id.textView2);
                     winnerTextView.setText(winner+ " has Won!!");
@@ -111,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        System.out.println("Hello create!!");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
